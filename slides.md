@@ -65,3 +65,6 @@ src: ./pages/jquery.md
 src: ./pages/promises.md
 ---
 
+---
+src: ./pages/ajax.md
+---
