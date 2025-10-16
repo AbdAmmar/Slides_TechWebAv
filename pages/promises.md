@@ -11,6 +11,47 @@ Handling Asynchronous Operations
 
 ---
 
+# What is a Promise?
+
+A **Promise** is an object representing the eventual completion or failure of an asynchronous operation.
+
+<div class="grid grid-cols-2 gap-4 mt-8">
+
+<div>
+
+## Promise States
+
+- 🕒 **Pending** - Initial state
+- ✅ **Fulfilled** - Operation succeeded
+- ❌ **Rejected** - Operation failed
+
+</div>
+
+<div>
+
+```js {monaco-run} {autorun:false}
+let promise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    if (true) {
+      resolve("👍👍👍");
+    } else {
+      reject("👎👎👎");
+    }
+  }, 1000);
+});
+
+// Using the promise
+promise
+  .then(result => console.log(result))
+  .catch(error => console.error(error));
+```
+
+</div>
+
+</div>
+
+---
+
 # From Callback Hell to Promises
 
 <br>
@@ -55,67 +96,6 @@ getData()
 
 ---
 
-# What is a Promise?
-
-A **Promise** is an object representing the eventual completion or failure of an asynchronous operation.
-
-<div class="grid grid-cols-2 gap-4 mt-8">
-
-<div>
-
-## Promise States
-
-- 🕒 **Pending** - Initial state
-- ✅ **Fulfilled** - Operation succeeded
-- ❌ **Rejected** - Operation failed
-
-</div>
-
-<div>
-
-```js
-const myPromise = new Promise((resolve, reject) => {
-  // Async operation here
-  if (success) {
-    resolve(result);
-  } else {
-    reject(error);
-  }
-});
-```
-
-</div>
-
-</div>
-
----
-
-# Creating a Promise
-
-<br>
-
-```js {monaco-run} {autorun:false}
-function myAsyncOperation() {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      const randomNumber = Math.random();
-      if (randomNumber > 0.5) {
-        resolve('Success! Number: ' + randomNumber);
-      } else {
-        reject('Failed! Number too low: ' + randomNumber);
-      }
-    }, 1000);
-  });
-}
-
-// Using the promise
-myAsyncOperation()
-  .then(result => console.log(result))
-  .catch(error => console.error(error));
-```
-
----
-
 # Async/Await - Modern Promise Syntax
 
 <div class="grid grid-cols-2 gap-4">
@@ -125,21 +105,13 @@ myAsyncOperation()
 ```js {monaco-run} {autorun:false}
 function myAsyncOperation() {
   return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      const randomNumber = Math.random();
-      if (randomNumber > 0.5) {
-        resolve('Success! Number: ' + randomNumber);
-      } else {
-        reject('Failed! Number too low: ' + randomNumber);
-      }
-    }, 1000);
+    setTimeout(() => resolve("👋👋👋"), 2000);
   });
 }
 
 // Using the promise
 myAsyncOperation()
   .then(result => console.log(result))
-  .catch(error => console.error(error));
 ```
 
 </div>
@@ -147,29 +119,17 @@ myAsyncOperation()
 <div v-click>
 
 ```js {monaco-run} {autorun:false}
-function myAsyncOperation() {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      const randomNumber = Math.random();
-      if (randomNumber > 0.5) {
-        resolve('Success! Number: ' + randomNumber);
-      } else {
-        reject('Failed! Number too low: ' + randomNumber);
-      }
-    }, 1000);
+async function myAsyncOperation() {
+  let promise = new Promise((resolve, reject) => {
+    setTimeout(() => resolve("👋👋👋"), 2000);
   });
+
+  // Using the promise
+  let result = await promise;
+  console.log(result);
 }
 
-async function main() {
-  try {
-    const result = await myAsyncOperation();
-    console.log(result);
-  } catch (error) {
-    console.error(error);
-  }
-}
-
-main();
+myAsyncOperation();
 ```
 
 </div>
