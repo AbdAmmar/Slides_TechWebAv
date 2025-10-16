@@ -13,29 +13,22 @@ hideInToc: true
 
 - **Lightweight JavaScript library** (write less, do more)
 - **Cross-browser compatible**
-- **Simplifies**:
-  - DOM manipulation
-  - Event handling
-  - Animations
-  - AJAX calls
+- **Simplifies**: DOM manipulation, Event handling, Animations, etc.
 
-```html
-<!-- Include jQuery -->
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-```
+<br>
 
+<div class="grid grid-cols-2 gap-4">
 
----
-hideInToc: true
----
+<div>
 
-# jQuery Syntax
+Basic syntax: `$(selector).action()`
+ - `$` - Access jQuery
+ - `(selector)` - Find HTML elements
+ - `action()` - Perform action on elements
 
-## Basic syntax: `$(selector).action()`
+</div>
 
-- `$` - Access jQuery
-- `(selector)` - Find HTML elements
-- `action()` - Perform action on elements
+<div>
 
 ```js
 $(document).ready(function(){
@@ -48,28 +41,9 @@ $(function(){
 });
 ```
 
----
-hideInToc: true
----
+</div>
 
-# Selectors
-
-```js
-// Element selector
-$("p")                  // All <p> elements
-
-// ID selector  
-$("#myId")              // Element with id="myId"
-
-// Class selector
-$(".myClass")           // All elements with class="myClass"
-
-// Attribute selector
-$("[href]")             // All elements with href attribute
-
-// Multiple selectors
-$("h1, h2, p")         // All h1, h2, and p elements
-```
+</div>
 
 ---
 hideInToc: true
@@ -77,38 +51,41 @@ hideInToc: true
 
 # DOM Manipulation
 
-## Get/Set Content
-
-```js
-// Get
-$("#myDiv").text()              // Get text content
-$("#myDiv").html()              // Get HTML content
-$("#myInput").val()             // Get input value
-
-// Set
-$("#myDiv").text("Hello")       // Set text
-$("#myDiv").html("<b>Bold</b>") // Set HTML
-$("#myInput").val("New Value")  // Set input value
+```html
+<!-- Include jQuery -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 ```
 
----
-hideInToc: true
----
+<div class="grid grid-cols-[450px_1fr] gap-4">
 
-# DOM Manipulation (cont.)
-
-## Add/Remove Elements
+<div>
 
 ```js
-// Add
-$("#myDiv").append("<p>New paragraph</p>")    // Add at end
-$("#myDiv").prepend("<p>First paragraph</p>") // Add at beginning
-$("#myDiv").after("<div>After</div>")         // Add after element
-$("#myDiv").before("<div>Before</div>")       // Add before element
+document.getElementById("myDiv").textContent;
+document.getElementById("myDiv").innerHTML;
+document.getElementById("myInput").value;
 
-// Remove
-$("#myDiv").remove()    // Remove element and children
-$("#myDiv").empty()     // Remove children only
+document.getElementById("myDiv").textContent = "Hello";
+document.getElementById("myDiv").innerHTML = "<b>Bold</b>";
+document.getElementById("myInput").value = "New Value";
 ```
 
+</div>
+
+<div>
+
+```js
+$("#myDiv").text();
+$("#myDiv").html();
+$("#myInput").val();
+
+$("#myDiv").text("Hello");
+$("#myDiv").html("<b>Bold</b>");
+$("#myInput").val("New Value");
+```
+
+</div>
+
+
+</div>
 
