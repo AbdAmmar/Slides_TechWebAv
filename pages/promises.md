@@ -1,14 +1,13 @@
 
----
-hideInToc: true
----
-
 # JavaScript Promises
 
 <div class="text-2xl text-gray-500">
 Handling Asynchronous Operations
 </div>
 
+
+---
+hideInToc: true
 ---
 
 # What is a Promise?
@@ -50,6 +49,8 @@ promise
 
 </div>
 
+---
+hideInToc: true
 ---
 
 # From Callback Hell to Promises
@@ -94,6 +95,8 @@ getData()
 
 </div>
 
+---
+hideInToc: true
 ---
 
 # Async/Await - Modern Promise Syntax

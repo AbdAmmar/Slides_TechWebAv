@@ -54,21 +54,10 @@ slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
 <Toc />
 
 ---
-
-# Before Promise Section
-
-<div class="text-center mt-20">
-  <h2>Up Next: JavaScript Promises</h2>
-  <p>Understanding Asynchronous Programming</p>
-</div>
+src: ./pages/jquery.md
+---
 
 ---
 src: ./pages/promises.md
 ---
-
----
-
-# Next Topic
-
-Continue with other topics...
 
