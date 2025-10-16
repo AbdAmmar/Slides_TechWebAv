@@ -18,6 +18,22 @@ hideInToc: true
 
 <div>
 
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Example</title>
+</head>
+<body>
+</body>
+</html>
+```
+
+</div>
+
+<div>
+
 ```js {monaco-run} {autorun:false}
 const win = window.open('./pages/html/file1.html');
 
@@ -31,22 +47,6 @@ function hi() {
   let str = "JavaScript can access and modify any part"
   win.document.body.innerHTML += `<h2>${str}</h2>`;
 }
-```
-
-</div>
-
-<div>
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>Example</title>
-</head>
-<body>
-</body>
-</html>
 ```
 
 </div>
@@ -90,10 +90,26 @@ hideInToc: true
 
 # Common Events
 
-```js
-```
+<br>
 
 <div class="grid grid-cols-2 gap-8">
+
+<div>
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Example</title>
+</head>
+<body>
+  <h1 id="my-text">You can't change my color</h1>
+</body>
+</html>
+```
+
+</div>
 
 <div>
 
@@ -111,23 +127,6 @@ function changeColor() {
     this.style.color = "red";
   });
 }
-```
-
-</div>
-
-<div>
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>Example</title>
-</head>
-<body>
-  <h1 id="my-text">You can't change my color</h1>
-</body>
-</html>
 ```
 
 </div>
