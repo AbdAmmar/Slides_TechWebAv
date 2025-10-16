@@ -1,9 +1,11 @@
+---
 
 # DOM Manipulation
 
 <div class="text-2xl text-gray-500">
 Vanilla JavaScript
 </div>
+
 
 
 ---
@@ -80,39 +82,6 @@ newDiv.removeChild(newText);
 element.style.color = "red";
 element.style.backgroundColor = "blue";
 element.style.fontSize = "20px";
-```
-
----
-hideInToc: true
----
-
-# Event Handling
-
-```js
-const button = document.getElementById("myButton")
-
-// Add event listener
-button.addEventListener("click", function(event) {
-    console.log("Button clicked!")
-    console.log(event.target)                     // Element that triggered event
-})
-
-// Arrow function syntax
-button.addEventListener("mouseenter", (e) => {
-    e.target.style.backgroundColor = "yellow"
-})
-
-// Remove event listener (requires named function)
-const handleClick = (e) => console.log("Clicked!")
-button.addEventListener("click", handleClick)
-button.removeEventListener("click", handleClick)
-
-// Event delegation (handle events on dynamic elements)
-document.addEventListener("click", function(e) {
-    if (e.target.classList.contains("dynamic-btn")) {
-        console.log("Dynamic button clicked!")
-    }
-})
 ```
 
 ---

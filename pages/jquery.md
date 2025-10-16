@@ -1,4 +1,3 @@
-
 # jQuery Basics
 
 <div class="text-2xl text-gray-500">
