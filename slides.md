@@ -54,6 +54,10 @@ slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
 <Toc />
 
 ---
+src: ./pages/dommanip.md
+---
+
+---
 src: ./pages/jquery.md
 ---
 

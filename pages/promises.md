@@ -1,4 +1,5 @@
 
+
 # JavaScript Promises
 
 <div class="text-2xl text-gray-500">
@@ -138,6 +139,4 @@ myAsyncOperation();
 </div>
 
 </div>
-
----
 
