@@ -35,7 +35,7 @@ hideInToc: true
 <div>
 
 ```js {monaco-run} {autorun:false}
-const win = window.open('./example.html');
+const win = window.open('./example1.html');
 
 win.onload = () => {
   hi();
@@ -114,7 +114,7 @@ hideInToc: true
 <div>
 
 ```js {monaco-run} {autorun:false}
-const win = window.open('./pages/html/file2.html');
+const win = window.open('./example2.html');
 
 win.onload = () => {
   changeColor();
