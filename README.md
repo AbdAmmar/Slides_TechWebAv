@@ -1,11 +1,31 @@
-# Welcome to [Slidev](https://github.com/slidevjs/slidev)!
+# Introduction to Web Technologies
 
-To start the slide show:
+This repository contains a presentation covering concepts of modern web technology. The slides are built using [Slidev](https://sli.dev/) framework.
 
-- `pnpm install`
-- `pnpm dev`
-- visit <http://localhost:3030>
+The slides are publicly available and can be viewed directly in your browser without any installation.
 
-Edit the [slides.md](./slides.md) to see the changes.
+**[Click here to view the presentation](https://abdammar.github.io/Slides_TechWebAv/)**
 
-Learn more about Slidev at the [documentation](https://sli.dev/).
+---
+
+## Local Development
+
+If you wish to run the slides locally or edit them, you can follow these steps:
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/abdammar/Slides_TechWebAv.git
+    cd Slides_TechWebAv
+    ```
+
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+
+3.  **Start the development server:**
+    ```bash
+    npm run dev
+    ```
+    This will open the slides at `http://localhost:3030` with hot-reloading enabled.
+
