@@ -35,7 +35,7 @@ hideInToc: true
 <div>
 
 ```js {monaco-run} {autorun:false}
-const win = window.open('./pages/html/file1.html');
+const path = `${import.meta.env.BASE_URL}pages/html/file1.html`;
 
 win.onload = () => {
   hi();
