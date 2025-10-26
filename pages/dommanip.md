@@ -35,9 +35,7 @@ hideInToc: true
 <div>
 
 ```js {monaco-run} {autorun:false}
-const relativePath = './pages/html/file1.html';
-const fullUrl = new URL(relativePath, window.location.href).href;
-const win = window.open(fullUrl);
+const win = window.open('./example.html');
 
 win.onload = () => {
   hi();
