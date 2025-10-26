@@ -32,11 +32,6 @@ jobs:
       - name: Build
         run: npx slidev build --base /Slides_TechWebAv/
 
-      - name: Inspect Build Output
-        run: |
-          echo "--- Verifying build output ---"
-          grep -r "__BASE_URL__" dist || true
-
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
