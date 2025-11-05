@@ -45,6 +45,62 @@ echo "Hello World!";
 
 </div>
 
+
+
+---
+hideInToc: true
+---
+
+# Example
+
+<div class="grid grid-cols-2 gap-8">
+
+<div>
+
+## PHP file
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Example</title>
+</head>
+<body>
+	<!-- comment inside html -->
+	<?php
+	echo "<h1>Hello from PHP!</h1>";
+	// comment inside php
+	?>
+</body>
+</html>
+```
+
+</div>
+
+<div>
+
+## after PHP interpretation
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Example</title>
+</head>
+<body>
+	<!-- comment inside html -->
+	<h1>Hello from PHP!</h1></body>
+</html>
+```
+
+</div>
+
+</div>
+
+
+
 ---
 hideInToc: true
 ---
