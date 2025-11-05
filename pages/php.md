@@ -40,7 +40,6 @@ echo "Hello World!";
 ?>
 ```
 
-
 </div>
 
 </div>
@@ -179,6 +178,101 @@ function greet($name) {
 }
 
 echo greet("Alice"); // Hello, Alice!
+```
+
+</div>
+
+</div>
+
+
+
+
+---
+hideInToc: true
+---
+
+# PHP and MySQL
+
+
+- PHP can connect directly to a **MySQL database** to display and modify data in real time
+
+- It can:
+  - Retrieve data (`SELECT`)
+  - Add new records (`INSERT`)
+  - Update existing information (`UPDATE`)
+  - Delete unnecessary rows (`DELETE`)
+
+- PHP provides **two main extensions** to interact with MySQL:
+  - **MySQLi** (MySQL improved)
+  - **PDO** (PHP Data Objects)
+
+
+
+
+
+---
+hideInToc: true
+---
+
+# Example
+
+<div class="grid grid-cols-2 gap-8">
+
+<div>
+
+## MySQLi (Procedural) 
+
+```php
+<?php
+// Open connection
+$conn = new mysqli(
+    "db_host",
+    "db_user",
+    "db_pass",
+    "db_name"
+);
+
+// Run a query
+$sql = "SELECT * FROM users";
+$result = $conn->query($sql);
+
+// Browse result
+while ($row = $result->fetch_assoc()) {
+  echo $row["username"] . "<br>";
+}
+
+// Close connection
+$conn->close();
+?>
+```
+
+</div>
+
+<div>
+
+## PDO (Object-Oriented)
+
+```php
+<?php
+// Open connection
+$conn = new PDO(
+    "mysql:host=db_host;dbname=db_name",
+    "db_user",
+    "db_pass"
+);
+
+// Run a query
+$sql = "SELECT * FROM users";
+$result = $conn->query($sql);
+
+// Browse result
+while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+  echo $row["username"] . "<br>";
+}
+
+// Close connection (automatic when script ends)
+$conn = null;
+?>
 ```
 
 </div>
